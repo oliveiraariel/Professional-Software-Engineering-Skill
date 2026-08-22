@@ -1,143 +1,987 @@
-# Contexto de Continuidade — Professional Software Engineering Skill
+# New Chat Context — Adaptive AI Orchestrator
 
-## 1. Finalidade
-
-Este documento orienta a retomada do desenvolvimento conceitual e, posteriormente, da implementação da:
-
-**Professional Software Engineering Skill**
-
-A finalidade é permitir a continuidade do trabalho entre diferentes chats, sessões ou contextos sem depender do histórico completo de uma conversa anterior.
-
-Este documento não substitui os demais documentos do projeto.
+**Projeto:** Adaptive AI Orchestrator  
+**Documento:** Contexto de Retomada em Novo Chat  
+**Versão:** 0.2  
+**Status:** Atualizado para a fase pré-Implementation Plan
 
 ---
 
-# 2. Fontes de verdade do projeto
+# 1. Finalidade
 
-Ao iniciar uma nova sessão de trabalho, os documentos devem ser considerados na seguinte ordem de autoridade:
+Este documento permite retomar o desenvolvimento do **Adaptive AI Orchestrator** em outro chat, sessão ou contexto sem depender do histórico completo da conversa anterior.
 
-## 2.1 MASTER-SPECIFICATION.md
+Seu objetivo é fornecer ao agente que assumir o projeto:
 
-Local:
+- identidade atual do projeto;
+- fontes de verdade;
+- estado consolidado;
+- decisões importantes;
+- estrutura documental vigente;
+- transição ainda em andamento;
+- inconsistências conhecidas;
+- ponto exato de retomada;
+- próximo gate.
+
+Este documento não substitui os documentos normativos, arquiteturais ou processuais do projeto.
+
+---
+
+# 2. Regra principal de retomada
+
+Ao iniciar um novo chat:
+
+```text
+LER
+→ COMPREENDER
+→ VERIFICAR ESTADO
+→ IDENTIFICAR PONTO DE RETOMADA
+→ CONTINUAR
+```
+
+Não:
+
+```text
+novo chat
+→ reinventar o projeto
+```
+
+O objetivo é **continuidade**, não reinicialização.
+
+---
+
+# 3. Identidade atual do projeto
+
+O projeto atualmente é:
+
+> **Adaptive AI Orchestrator**
+
+Ele evoluiu do conceito anterior de uma única Professional Software Engineering "Super Skill".
+
+O objetivo agora é desenvolver um Orchestrator que compreenda projetos, organize trabalho, selecione recursos, delegue execução, avalie resultados, reprograme o trabalho e preserve conhecimento e continuidade.
+
+A Professional Software Engineering Skill permanece como conhecimento legado de alto valor, não como o objetivo final do sistema.
+
+---
+
+# 4. Fontes de verdade e autoridade
+
+As fontes de verdade devem ser interpretadas conforme o **escopo ao qual pertencem**.
+
+O repositório contém conhecimento legado e o novo projeto do Adaptive AI Orchestrator. Portanto, não deve existir uma única hierarquia normativa para documentos de domínios diferentes.
+
+## 4.1 Projeto legado — Professional Software Engineering Skill
 
 ```text
 specifications/MASTER-SPECIFICATION.md
 ```
 
-É a fonte normativa principal da Skill.
+É a fonte normativa do projeto legado da Professional Software Engineering Skill.
 
-Contém as decisões conceituais já consolidadas.
+Seu conteúdo pode ser reutilizado como conhecimento pelo novo projeto, mas uma decisão do Orchestrator não deve ser tratada como subordinada ao Master apenas por estar no mesmo repositório.
 
-Quando houver conflito entre uma hipótese levantada durante uma nova sessão e uma decisão registrada no MASTER-SPECIFICATION.md, a decisão já consolidada deve ser preservada, salvo se houver uma discussão explícita para sua revisão.
+---
 
-## 2.2 DEVELOPMENT-CONTINUITY.md
+## 4.2 Novo projeto — Adaptive AI Orchestrator
 
-Local:
+```text
+specifications/orchestrator/ORCHESTRATOR-REQUIREMENTS.md
+```
 
-docs/DEVELOPMENT-CONTINUITY.md
+É a referência normativa de requisitos do Adaptive AI Orchestrator.
+
+A arquitetura, o design e as demais decisões do Orchestrator devem ser coerentes com seus requisitos aprovados.
+
+Quando uma decisão do projeto legado for reutilizada, ela deve ser analisada e adaptada ao contexto do Orchestrator antes de ser incorporada.
+
+---
+
+## 4.3 Continuidade
+
+```text
+docs/process/DEVELOPMENT-CONTINUITY.md
+```
 
 É o registro operacional de continuidade.
 
-Contém:
+Para a atualização mais recente, também verificar o arquivo de versão correspondente, quando ainda estiver em fase de consolidação.
 
-estado atual do desenvolvimento;
-decisões já discutidas;
-decisões ainda pendentes;
-contexto necessário para retomada;
-ponto exato onde o trabalho foi interrompido;
-próximos trabalhos previstos.
+---
 
-## 2.3 GIT-WORKFLOW.md
+## 4.4 Arquitetura
 
-Local:
+```text
+docs/architecture/ORCHESTRATOR-SYSTEM-ARCHITECTURE.md
+```
 
-docs/GIT-WORKFLOW.md
+Define a arquitetura sistêmica consolidada.
 
-Contém o procedimento operacional de versionamento do projeto com Git e GitHub.
+---
 
-Ele não define a metodologia da Skill.
+## 4.5 Design
 
-# 3. Regra de leitura inicial
+```text
+docs/architecture/ORCHESTRATOR-SYSTEM-DESIGN.md
+```
 
-Ao iniciar uma nova sessão de desenvolvimento, o agente deve:
+É o design técnico canônico atual.
 
-identificar os três documentos;
-ler o MASTER-SPECIFICATION.md;
-ler o DEVELOPMENT-CONTINUITY.md;
-ler o GIT-WORKFLOW.md quando a atividade envolver versionamento;
-identificar a etapa atual;
-identificar o último ponto consolidado;
-identificar as questões ainda abertas;
-somente então continuar o trabalho.
+Antes de iniciar implementação, verificar se o conteúdo efetivamente incorpora a revisão v0.2 registrada em:
 
-O agente não deve iniciar uma nova proposta metodológica antes de compreender o estado registrado.
+```text
+docs/reviews/ORCHESTRATOR-DESIGN-REVIEW.md
+```
 
-# 4. Regra de preservação das decisões
+---
 
-Decisões já consolidadas não devem ser reabertas apenas porque uma alternativa diferente foi imaginada posteriormente.
+## 4.6 SDD
 
-Uma decisão consolidada só deve ser reconsiderada quando existir:
+```text
+docs/process/ORCHESTRATOR-SPEC-DRIVEN-DEVELOPMENT.md
+```
 
-nova evidência relevante;
-contradição identificada;
-impacto anteriormente desconhecido;
-mudança significativa de contexto;
-necessidade explícita de revisão;
-evolução metodológica devidamente fundamentada.
+Define Specification-Driven Development como disciplina transversal.
 
-Quando uma decisão consolidada for reconsiderada, o agente deve:
+---
 
-identificar decisão atual
+## 4.7 Contexto de domínio
+
+```text
+CONTEXT.md
+```
+
+Define a linguagem canônica do Adaptive AI Orchestrator.
+
+Não é especificação, arquitetura ou design.
+
+---
+
+## 4.8 Git
+
+```text
+docs/process/GIT-WORKFLOW.md
+```
+
+Usar quando a tarefa envolver Git/GitHub.
+
+---
+
+## 5. Ordem recomendada de leitura
+
+Em uma retomada de desenvolvimento:
+
+```text
+1. CONTEXT.md
+2. DEVELOPMENT-CONTINUITY.md
+3. MASTER-SPECIFICATION.md
+4. ORCHESTRATOR-REQUIREMENTS.md
+5. ORCHESTRATOR-SYSTEM-ARCHITECTURE.md
+6. ORCHESTRATOR-SYSTEM-DESIGN.md
+7. ORCHESTRATOR-DESIGN-REVIEW.md
+8. ORCHESTRATOR-SPEC-DRIVEN-DEVELOPMENT.md
+```
+
+Não é necessário ler todo o projeto legado ou todos os documentos de capacidade em toda sessão.
+
+Consultar somente os documentos necessários para a tarefa atual.
+
+---
+
+# 6. O que o Orchestrator será
+
+O Adaptive AI Orchestrator deve possuir conhecimento aprofundado sobre:
+
+```text
+projeto
++
+gestão
++
+ecossistema
++
+agentes
++
+Skills
++
+modelos
++
+delegação
++
+avaliação
++
+replanning
++
+continuidade
++
+aprendizagem
+```
+
+Mas:
+
+> **conhecer, supervisionar e avaliar não implica executar diretamente toda especialização.**
+
+O Orchestrator deve delegar partes do trabalho a agentes especializados quando isso produzir melhor resultado.
+
+---
+
+# 7. Capacidades fundamentais
+
+As capacidades centrais atualmente definidas são:
+
+```text
+Project Awareness
+Project Management
+Ecosystem Awareness
+Structural Analysis
+Agent & Skill Analysis
+Resource / Model Selection
+Delegation & Coordination
+Result Evaluation
+Replanning
+Continuity & Learning
+```
+
+A separação entre essas capacidades deve ser preservada.
+
+---
+
+# 8. Fluxo conceitual principal
+
+O modelo de raciocínio do Orchestrator é:
+
+```text
+PROJECT
+   ↓
+UNDERSTAND
+   ↓
+STRUCTURE
+   ↓
+APPROVE
+   ↓
+WORK UNITS
+   ↓
+REQUIRED CAPABILITIES
+   ↓
+SKILLS
+   ↓
+ELIGIBLE AGENTS
+   ↓
+ELIGIBLE MODELS
+   ↓
+RESOURCE CONFIGURATION
+   ↓
+DELEGATION
+   ↓
+EXECUTION
+   ↓
+EVALUATION
+   ↓
+INTEGRATION
+   ↓
+REPLANNING
+   ↓
+CONTINUITY / LEARNING
+```
+
+---
+
+# 9. Regra fundamental de delegação
+
+Nunca partir simplesmente de:
+
+```text
+"quais agentes estão disponíveis?"
+```
+
+Partir de:
+
+```text
+necessidade
+→ Work Unit
+→ capacidade
+→ Skill
+→ agente
+→ modelo
+→ configuração
+```
+
+A existência de um recurso não cria automaticamente uma necessidade de utilizá-lo.
+
+---
+
+# 10. Economicidade
+
+O Orchestrator deve considerar:
+
+```text
+capacidade
+qualidade
+custo
+latência
+contexto
+coordenação
+retrabalho
+risco
+```
+
+Mais agentes não significa automaticamente melhor resultado.
+
+Um agente ou modelo de menor custo pode ser adequado quando satisfizer os critérios exigidos.
+
+---
+
+# 11. Autoridade do desenvolvedor
+
+O desenvolvedor permanece responsável por definir limites estratégicos.
+
+Podem incluir:
+
+```text
+modelos permitidos
+providers
+orçamento
+custos máximos
+segurança
+recursos proibidos
+níveis de autonomia
+qualidade mínima
+políticas
+```
+
+O Orchestrator escolhe dentro dessas restrições.
+
+---
+
+# 12. Structural Analysis
+
+A estrutura do projeto pode ser produzida por agente especialista e revisada pelo Orchestrator.
+
+Fluxo:
+
+```text
+Orchestrator
+→ estruturação especializada
+→ proposta
+→ análise do Orchestrator
+→ feedback
+→ revisão
+→ reanálise
+→ aprovação
+→ baseline
+```
+
+O Orchestrator deve compreender a estrutura suficientemente para avaliá-la, sem precisar produzir sozinho toda a especialização estrutural.
+
+---
+
+# 13. Project Management
+
+A unidade operacional principal é:
+
+```text
+Work Unit
+```
+
+O trabalho deve ser liberado por dependência.
+
+Princípio:
+
+```text
+dependência
+→ disponibilidade
+→ execução
+```
+
+e não apenas:
+
+```text
+disponibilidade
+→ execução
+```
+
+A execução padrão é sequencial por dependência.
+
+Paralelismo é permitido quando houver maturidade, baixo acoplamento, dependências claras e benefício real.
+
+---
+
+# 14. Resource / Model Selection
+
+A seleção responde:
+
+> Entre as configurações tecnicamente elegíveis, qual oferece a melhor relação entre adequação, qualidade, risco, tempo e custo para esta Work Unit?
+
+Separar:
+
+```text
+Agent
+≠
+Skill
+≠
+Model
+≠
+Runtime
+```
+
+Um Agent pode possuir diferentes modelos elegíveis.
+
+---
+
+# 15. Result Evaluation
+
+Resultado recebido não significa resultado aceito.
+
+A avaliação verifica, conforme necessário:
+
+```text
+correção
+completude
+coerência
+aderência ao objetivo
+restrições
+suficiência
+rastreabilidade
+evidências
+dependências
+risco
+impacto
+necessidade de revisão
+```
+
+A profundidade da avaliação é proporcional ao impacto, criticidade, incerteza e sensibilidade.
+
+---
+
+# 16. Replanning
+
+Replanning preserva o máximo de trabalho válido.
+
+Fluxo:
+
+```text
+PLAN
+→ EXECUTE
+→ EVALUATE
+→ NEW INFORMATION
+→ REPLAN
+→ NEW PLAN
+```
+
+Não reiniciar o projeto inteiro por uma mudança localizada.
+
+Classificação de impacto:
+
+```text
+LOCAL
+CONTEXTUAL
+STRUCTURAL
+CRITICAL
+UNKNOWN IMPACT
+```
+
+---
+
+# 17. Continuity & Learning
+
+Distinguir:
+
+```text
+CONTINUITY
+→ preservar estado e histórico necessário
+
+LEARNING
+→ extrair conhecimento útil para decisões futuras
+```
+
+Experiência não se torna regra automaticamente.
+
+O conceito de:
+
+```text
+Learning Candidate
+```
+
+existe justamente para representar conhecimento que ainda precisa de validação e governança.
+
+---
+
+# 18. Arquitetura atual
+
+A arquitetura macro adotada é:
+
+```text
+Clean Architecture
++
+DDD
++
+Ports & Adapters
++
+SOLID / Clean Code
++
+Deep Modules
++
+Specification-Driven Development
+```
+
+Regra de dependência:
+
+```text
+Interface / Infrastructure
         ↓
-explicar motivo da revisão
+Application
         ↓
-avaliar impactos
+Domain
+```
+
+O núcleo não deve depender diretamente de:
+
+```text
+OpenClaw
+Hermes
+SQL
+SDKs de providers
+MCP
+frameworks
+```
+
+---
+
+# 19. Modular Monolith
+
+A implementação inicial será tratada como:
+
+```text
+modular monolith
+```
+
+Não há justificativa atual para iniciar com microserviços.
+
+As separações são inicialmente lógicas e internas.
+
+---
+
+# 20. Deep Modules
+
+O design deve favorecer:
+
+```text
+interface pequena
++
+comportamento profundo
++
+alto leverage
++
+alta locality
+```
+
+Evitar conjuntos de módulos rasos que apenas repassem chamadas.
+
+Antes de criar uma abstração, perguntar:
+
+```text
+Existe complexidade real para esconder?
+Existe variação real?
+Existe necessidade de substituição?
+Existe benefício de teste?
+```
+
+---
+
+# 21. Seam Discipline
+
+Ports e adapters devem existir quando houver seam real.
+
+Regra:
+
+```text
+necessidade real
+→ seam
+→ interface
+→ adapter
+```
+
+Não criar interfaces especulativas para todas as classes.
+
+`AgentRuntime` é um seam real porque OpenClaw é o primeiro runtime e Hermes/outros runtimes podem ocupar o mesmo papel.
+
+---
+
+# 22. Design It Twice
+
+Módulos críticos já identificados:
+
+```text
+Resource Selection
+Delegation
+Result Evaluation
+Replanning
+```
+
+Para esses módulos, interfaces devem ser avaliadas por:
+
+```text
+Depth
+Leverage
+Locality
+Seam placement
+```
+
+antes do congelamento do contrato de implementação.
+
+---
+
+# 23. Specification-Driven Development
+
+SDD é disciplina transversal.
+
+Fluxo:
+
+```text
+Intention
+→ Specification
+→ Architecture
+→ Design
+→ Implementation Plan
+→ Implementation
+→ Verification / Evals
+→ Evidence
+→ Feedback
+```
+
+Regras fundamentais:
+
+```text
+Specification = fonte normativa da intenção
+Code = implementação
+Test / Eval = verificação
+Evidence = demonstração
+```
+
+Prompt não substitui Specification.
+
+Skill não substitui Project Specification.
+
+Policy não deve depender apenas de Prompt.
+
+---
+
+# 24. Skill Architecture
+
+A arquitetura física das Skills ainda não foi implementada.
+
+O modelo conceitual deverá considerar, quando aplicável:
+
+```text
+identity
+purpose
+capabilities
+invocationPolicy
+dependencies
+composition
+inputs
+outputs
+constraints
+compatibleAgents
+compatibleModels
+compatibleRuntimes
+provenance
+version
+```
+
+Também foi identificada a distinção:
+
+```text
+User-invoked
+Model-invoked
+```
+
+A forma final da Skill Architecture ainda será definida.
+
+---
+
+# 25. Linguagem do domínio
+
+`CONTEXT.md` é o glossário canônico.
+
+Termos centrais incluem:
+
+```text
+Project
+Work Unit
+Plan
+Baseline
+Agent
+Skill
+Model
+Resource Configuration
+Task Package
+Result Package
+Evaluation
+Decision
+Delegation
+Replanning
+Continuity
+Learning Candidate
+Policy
+Module
+Interface
+Seam
+Adapter
+Depth
+```
+
+Quando um novo termo relevante for consolidado, atualizar `CONTEXT.md` no momento apropriado.
+
+---
+
+# 26. Estrutura documental-alvo
+
+Estrutura definitiva pretendida:
+
+```text
+Professional-Software-Engineering-Skill/
+│
+├── README.md
+├── CONTEXT.md
+│
+├── specifications/
+│   ├── MASTER-SPECIFICATION.md
+│   ├── orchestrator/
+│   │   └── ...
+│   └── [future-skills]/
+│
+├── skills/
+│   ├── orchestrator/
+│   │   ├── SKILL.md
+│   │   ├── references/
+│   │   ├── resources/
+│   │   └── ...
+│   └── [future-skills]/
+│
+└── docs/
+    ├── architecture/
+    ├── process/
+    └── reviews/
+```
+
+Durante a transição ainda existe:
+
+```text
+docs/transition/
+```
+
+Essa pasta é temporária e deverá desaparecer quando seu conteúdo tiver sido devidamente reposicionado, consolidado, reescrito, renomeado ou eliminado.
+
+---
+
+# 27. Localizações relevantes atuais
+
+```text
+specifications/orchestrator/
+└── ORCHESTRATOR-REQUIREMENTS.md
+```
+
+```text
+docs/architecture/
+├── ORCHESTRATOR-SYSTEM-ARCHITECTURE.md
+└── ORCHESTRATOR-SYSTEM-DESIGN.md
+```
+
+```text
+docs/process/
+├── DEVELOPMENT-CONTINUITY*.md
+├── GIT-WORKFLOW.md
+├── NEW-CHAT-CONTEXT.md
+└── ORCHESTRATOR-SPEC-DRIVEN-DEVELOPMENT.md
+```
+
+```text
+docs/reviews/
+└── ORCHESTRATOR-DESIGN-REVIEW.md
+```
+
+---
+
+# 28. Documentos de transição
+
+Ainda existem documentos em:
+
+```text
+docs/transition/
+```
+
+Eles não devem ser considerados automaticamente parte da estrutura definitiva.
+
+Para cada documento:
+
+```text
+analisar função
+→ decidir destino
+→ mover / renomear / consolidar / reescrever / eliminar
+```
+
+Não mover tudo em massa.
+
+---
+
+# 29. Estado atual
+
+Já foram consolidados:
+
+```text
+Project Definition
+Capabilities
+Knowledge Map
+Requirements
+System Architecture
+System Design
+Design Review
+Specification-Driven Development
+CONTEXT.md
+```
+
+A arquitetura e o design já passaram por revisão usando:
+
+```text
+Clean Architecture
+DDD
+SOLID
+Ports & Adapters
+Deep Modules
+Seam Discipline
+Design It Twice
+SDD
+```
+
+---
+
+# 30. Inconsistência que deve ser verificada
+
+A revisão de Design registra um **Design v0.2**, mas deve ser verificado se o arquivo canônico:
+
+```text
+docs/architecture/ORCHESTRATOR-SYSTEM-DESIGN.md
+```
+
+já contém efetivamente o conteúdo consolidado da revisão v0.2.
+
+Não presumir que a versão está consolidada apenas porque a review existe.
+
+Se necessário:
+
+```text
+review
+→ consolidar Design
+→ validar
+→ atualizar arquivo canônico
+```
+
+---
+
+# 31. Próximo gate
+
+O próximo gate é:
+
+```text
+DESIGN CONSOLIDADO
         ↓
-apresentar alternativas
+IMPLEMENTATION PLAN
         ↓
-propor nova decisão
+WORK UNITS
         ↓
-obter aprovação quando necessário
+DEPENDENCY ORDER
         ↓
-atualizar os registros
+ACCEPTANCE CRITERIA
         ↓
-versionar a alteração
-# 5. Regra de distinção entre estados do conhecimento
+VERIFICATION STRATEGY
+        ↓
+IMPLEMENTATION
+```
 
-O agente deve preservar a diferença entre:
+Não iniciar código diretamente.
 
-FATO
-INFERÊNCIA
-HIPÓTESE
-PROPOSTA
-DECISÃO
-QUESTÃO PENDENTE
-VALIDAÇÃO
+---
 
-Não transformar:
+# 32. Objetivo do Implementation Plan
 
-hipótese em fato;
-inferência em decisão;
-proposta em decisão aprovada;
-ausência de informação em requisito;
-padrão encontrado em projeto em regra universal da Skill.
+O Implementation Plan deve converter o Design em trabalho executável.
 
-# 6. Regra para perguntas
+Cada Work Unit deverá definir, conforme aplicável:
 
-O agente deve fazer perguntas quando uma indefinição realmente impedir uma decisão segura ou ultrapassar sua autoridade.
+```text
+objetivo
+escopo
+entradas
+saídas
+dependências
+componentes afetados
+critério de aceitação
+estratégia de verificação
+ordem
+```
 
-Não deve perguntar desnecessariamente quando:
+A implementação deve começar preferencialmente pelo núcleo e validar o primeiro vertical slice antes das integrações mais complexas.
 
-a decisão estiver claramente determinada por evidências;
-a decisão for operacional;
-o impacto for baixo;
-a decisão estiver dentro da autoridade concedida;
-houver regra metodológica consolidada que determine o procedimento.
+---
 
-Quando precisar perguntar, deve apresentar o contexto necessário para permitir uma decisão consciente.
+# 33. Primeiro vertical slice esperado
 
-Sempre que adequado, apresentar:
+Direção preliminar:
 
+```text
+Initialize Project
++
+Create Work Unit
++
+Store State
++
+Read State
+```
+
+Depois:
+
+```text
+Plan Work
++
+Dependencies
++
+Ready / Blocked
+```
+
+E posteriormente:
+
+```text
+Agent / Skill Analysis
++
+Resource Selection
++
+Delegation
++
+Evaluation
++
+Replanning
+```
+
+A sequência exata será confirmada no Implementation Plan.
+
+---
+
+# 34. Regra para decisões durante a retomada
+
+Não perguntar quando a decisão puder ser tomada pela lógica já consolidada.
+
+Perguntar quando houver:
+
+```text
+ambiguidade material
+conflito entre fontes
+impacto desconhecido
+decisão fora da autoridade
+bloqueio real
+```
+
+Quando uma pergunta for necessária, apresentar:
+
+```text
 Questão
 Contexto
 Evidências
@@ -145,396 +989,189 @@ Alternativas
 Impacto
 Riscos
 Recomendação
-# 7. Regra de autonomia
+```
 
-A autonomia do agente é contextual.
+---
 
-A decisão de agir autonomamente deve considerar:
+# 35. Regra de preservação das decisões
 
-evidência;
-incerteza;
-impacto;
-reversibilidade;
-sensibilidade;
-autoridade.
+Quando uma decisão consolidada for reconsiderada:
 
-O modo --auto significa:
-
-executar autonomamente tudo aquilo que estiver dentro dos limites definidos pela Skill.
-
---auto não significa que decisões de alto impacto, sensíveis ou fora da autoridade possam ser tomadas sem intervenção humana.
-
-# 8. Regra de análise proporcional
-
-O agente não deve realizar diagnóstico global por padrão.
-
-A análise deve iniciar pela menor abrangência suficiente.
-
-Nível local
-
-Aplicado quando a alteração é isolada e de baixo impacto.
-
-Nível contextual
-
-É o nível padrão para alterações semânticas.
-
-Deve verificar elementos diretamente relacionados, dependências e coerência.
-
-Nível global
-
-Somente quando o impacto, o risco, a estrutura ou a natureza da tarefa justificar.
-
-Princípio:
-
-A inteligência da Skill não está em analisar tudo, mas em saber o que precisa ser analisado.
-
-# 9. Regra de estrutura dos projetos
-
-A estrutura dos projetos deve ser:
-
-ESPINHA DORSAL METODOLÓGICA
-+
-EXTENSÕES CONDICIONAIS
-+
-ELEMENTOS ESPECÍFICOS DO DOMÍNIO
-
-A Skill deve preservar padronização metodológica, mas adaptar a profundidade conforme:
-
-tamanho;
-domínio;
-complexidade;
-maturidade;
-risco;
-restrições;
-necessidades do cliente.
-
-O agente não deve impor uma estrutura excessivamente grande a projetos simples nem subdimensionar projetos complexos.
-
-# 10. Regra de aprovação da estrutura inicial
-
-Quando um projeto for recebido, a Skill deve:
-
-analisar
-→ diagnosticar
-→ estruturar
-→ propor etapas
-→ propor subetapas
-→ definir artefatos
-→ definir dependências
-→ definir critérios de validação
-→ apresentar o plano
-→ obter aprovação
-→ estabelecer baseline
-→ iniciar execução estruturada
-
-Mesmo quando o projeto recebido já estiver muito bem estruturado, a formalização da estrutura continua sendo importante.
-
-# 11. Regra de baseline
-
-Após a aprovação da estrutura inicial, essa estrutura passa a ser a baseline do projeto.
-
-A baseline deve proporcionar estabilidade ao processo.
-
-A partir dela:
-
-pequenas mudanças podem ocorrer normalmente;
-mudanças médias podem acomodar descobertas;
-grandes mudanças devem ser excepcionais e controladas;
-alterações críticas seguem as políticas de segurança e governança.
-
-A existência de uma baseline não significa que o projeto nunca poderá mudar.
-
-Significa que mudanças estruturais devem ser conscientes e rastreáveis.
-
-# 12. Regra de mudanças
-Mudanças estruturais
-
-Raras.
-
-Podem exigir:
-
-nova análise;
-novo planejamento;
-nova aprovação;
-nova baseline.
-Mudanças médias
-
-Acomodações de novas descobertas.
-
-Podem ser executadas autonomamente dentro dos limites de autoridade.
-
-Mudanças pequenas
-
-Frequentes e predominantemente automatizáveis.
-
-Mudanças críticas
-
-Relacionadas a risco, segurança, integridade, dados sensíveis, conformidade ou outros elementos sensíveis.
-
-Devem seguir governança específica.
-
-# 13. Regra de execução
-
-A execução padrão é:
-
-sequencial por dependência
-
-e não necessariamente paralela.
-
-O agente deve preferir estabilidade, coerência e redução de retrabalho.
-
-Paralelismo pode ser utilizado somente quando:
-
-a estrutura estiver madura;
-as dependências forem claras;
-as informações necessárias estiverem validadas;
-o acoplamento for baixo;
-o risco de mudança for baixo;
-existir benefício real.
-# 14. Regra de validação
-
-Cada unidade de trabalho deve ser validada antes de ser considerada concluída.
-
-A validação pode envolver:
-
-documentação;
-lógica;
-consistência;
-rastreabilidade;
-testes executáveis;
-análise de impacto.
-
-O fluxo esperado é:
-
-executar
-→ testar
-→ validar
-→ corrigir quando necessário
-→ revalidar
-→ concluir
-# 15. Regra de avanço
-
-Uma subetapa não deve ser considerada concluída simplesmente porque seu documento foi produzido.
-
-Uma etapa não deve ser considerada concluída simplesmente porque suas subetapas existem.
-
-O avanço depende da suficiência e da validação.
-
-# 16. Regra de reabertura
-
-Uma unidade já concluída pode ser reaberta quando uma alteração posterior demonstrar que ela foi afetada.
-
-A reabertura deve ser proporcional ao impacto.
-
-O agente deve evitar reiniciar o projeto inteiro quando somente uma parte foi afetada.
-
-Princípio:
-
-Propagar o impacto da mudança, não reinicializar indiscriminadamente o projeto.
-
-# 17. Regra de suficiência
-
-Suficiência não significa produzir todos os documentos possíveis.
-
-Um projeto deve possuir o nível de definição e validação adequado a:
-
-necessidade;
-objetivo;
-risco;
-impacto;
-complexidade;
-restrições;
-contexto;
-nível de serviço esperado.
-
-A Skill deve evitar tanto:
-
-subdimensionamento
-
-quanto:
-
-overengineering
-
-# 18. Regra de evolução da Skill
-
-A Skill pode evoluir com base em:
-
-experiências dos projetos;
-decisões;
-erros;
-validações;
-padrões recorrentes;
-pesquisas externas;
-novas práticas de TI;
-novas práticas empresariais;
-mudanças tecnológicas.
-
-A evolução deve ser governada.
-
-O conhecimento externo deve passar por avaliação antes de se tornar padrão da Skill.
-
-Uma regra encontrada em um projeto não deve automaticamente se transformar em regra geral da Skill.
-
-# 19. Controle contra deriva metodológica
-
-O agente não deve:
-
-modificar silenciosamente seus princípios;
-substituir uma metodologia consolidada por uma preferência momentânea;
-incorporar uma tendência isolada como padrão;
-remover controles de segurança para aumentar velocidade;
-reduzir critérios de validação apenas para concluir uma etapa;
-esconder incertezas para evitar intervenção humana.
-
-Mudanças na metodologia devem ser explicitamente avaliadas e registradas.
-
-# 20. Estado atual do projeto
-Etapa 1 — Propósito e Contrato
-
-CONCLUÍDA
-
-Etapa 2 — Modelo Mental do Agente
-
-CONCLUÍDA
-
-Etapa 3 — Ciclo Operacional
-
-EM DESENVOLVIMENTO
-
-# 21. Ponto exato de retomada
-
-A próxima atividade deve continuar a Etapa 3.
-
-O último bloco conceitual consolidado foi:
-
-fila de trabalho
-→ priorização
-→ execução
-→ validação
-→ revalidação
-→ gate
-→ conclusão
-
-O trabalho ainda precisa definir formalmente:
-
-fila de trabalho;
-critérios de priorização;
-tratamento de bloqueadores;
-estados de validação;
-critérios formais de conclusão de subetapa;
-critérios formais de conclusão de etapa;
-gates;
-finalização;
-aprendizagem pós-projeto.
-
-Não iniciar a Etapa 4 antes de a Etapa 3 ser considerada concluída.
-
-# 22. Procedimento de continuidade
-
-Ao concluir uma nova decisão conceitual:
-
-discutir
-→ analisar
-→ decidir
-→ consolidar
-→ atualizar MASTER-SPECIFICATION
-→ atualizar DEVELOPMENT-CONTINUITY
-→ validar
-→ versionar
-→ publicar
-
-Quando uma etapa for concluída:
-
-consolidar suas decisões;
-atualizar o MASTER-SPECIFICATION.md;
-atualizar este documento;
-revisar inconsistências;
-criar nova versão no Git;
-publicar no GitHub;
-somente então avançar para a próxima etapa.
-
-# 23. Regra para mudanças nos documentos
-
-O MASTER-SPECIFICATION.md é normativo.
-
-O DEVELOPMENT-CONTINUITY.md é operacional.
-
-O GIT-WORKFLOW.md é procedimental.
-
-Quando um novo conhecimento for descoberto:
-
-conhecimento
-→ análise
-→ decisão
-→ documento apropriado
-
-Não inserir indiscriminadamente todo conhecimento em todos os documentos.
-
-# 24. Regra para retomada em novo chat
-
-Ao receber este documento, o agente deve compreender que:
-
-este é um projeto em andamento;
-as Etapas 1 e 2 estão concluídas;
-a Etapa 3 está em desenvolvimento;
-decisões anteriores devem ser preservadas;
-o objetivo não é reiniciar o projeto;
-o objetivo é continuar a partir do ponto exato registrado.
-
-Antes de responder sobre o desenvolvimento da Skill, o agente deve utilizar este documento e o MASTER-SPECIFICATION.md como contexto principal.
-
-# 25. Regra de não reinicialização
-
-O agente não deve:
-
-recomeçar as Etapas 1 e 2;
-reconstruir toda a metodologia do zero;
-substituir decisões consolidadas sem justificativa;
-criar uma metodologia incompatível com a especificação existente.
-
-Caso identifique uma possível melhoria em decisão já consolidada, deve apresentar explicitamente:
-
+```text
 Decisão atual
 ↓
 Nova evidência
 ↓
-Problema identificado
+Problema
 ↓
 Impacto
 ↓
-Proposta de revisão
+Alternativas
+↓
+Nova decisão
+↓
+Atualização documental
+↓
+Versionamento
+```
 
-e aguardar a decisão apropriada quando necessário.
+Não alterar silenciosamente.
 
-# 26. Objetivo da próxima sessão
+---
 
-Retomar a construção da Etapa 3 — Ciclo Operacional.
+# 36. Regra de análise proporcional
 
-O primeiro foco deve ser a definição detalhada de:
+Não analisar tudo por padrão.
 
-# 1. fila de trabalho;
-# 2. priorização;
-# 3. bloqueadores;
-# 4. execução;
-# 5. validação;
-# 6. revalidação;
-# 7. gates;
-# 8. conclusão;
-# 9. reabertura;
-# 10. pós-projeto e aprendizagem.
+Começar pela menor abrangência suficiente:
 
-A construção deve seguir o processo utilizado anteriormente:
+```text
+LOCAL
+→ CONTEXTUAL
+→ GLOBAL
+```
 
+Aumentar a abrangência quando o impacto, risco, dependências ou natureza da mudança exigirem.
+
+---
+
+# 37. Regra de Git
+
+Quando a tarefa envolver versionamento:
+
+```text
+git status
+→ git diff
+→ validar
+→ git add
+→ git commit
+→ git push
+→ git status
+```
+
+O `GIT-WORKFLOW.md` é o documento operacional de referência para Git.
+
+---
+
+# 38. Regra de uso do legado
+
+O projeto legado pode e deve ser consultado quando seu conhecimento puder qualificar o novo projeto.
+
+Processo:
+
+```text
+conhecimento legado
+→ identificar
+→ avaliar compatibilidade
+→ adaptar
+→ incorporar
+```
+
+O legado é uma fonte de conhecimento, não uma obrigação de preservar sua organização anterior.
+
+---
+
+# 39. Regra contra reinicialização
+
+O agente que assumir o projeto não deve:
+
+```text
+recomeçar a definição do projeto
+reconstruir a arquitetura do zero
+recriar o Design sem necessidade
+ignorar a revisão v0.2
+descartar o conhecimento legado já aproveitado
+tratar a pasta transition como estrutura definitiva
+```
+
+Primeiro deve:
+
+```text
+ler
+→ verificar
+→ identificar
+→ continuar
+```
+
+---
+
+# 40. Ponto exato de retomada
+
+Ao receber este documento, o ponto esperado é:
+
+```text
+Projeto:
+Adaptive AI Orchestrator
+
+Arquitetura:
+consolidada em nível conceitual
+
+Design:
+revisado; confirmar consolidação efetiva do v0.2
+
+SDD:
+consolidado
+
+Context:
+criado
+
+Skills:
+arquitetura conceitual ainda em desenvolvimento
+
+Transição:
+em andamento
+
+Implementação:
+ainda não iniciada
+
+Próximo trabalho:
+Implementation Plan
+```
+
+Primeiro verificar a consistência do Design canônico.
+
+Depois:
+
+```text
+Implementation Plan
+```
+
+---
+
+# 41. Processo de trabalho
+
+A construção continua seguindo:
+
+```text
 propor
 → identificar indefinições
-→ perguntar
-→ decidir em conjunto
+→ perguntar quando necessário
+→ decidir
 → consolidar
 → registrar
+→ revisar
 → prosseguir
+```
 
-A colaboração com o responsável pelo projeto é parte integrante da metodologia.
+A colaboração com o responsável pelo projeto faz parte do processo.
 
+---
 
+# 42. Instrução final para um novo chat
 
+Não assumir que este documento é a única fonte de verdade.
 
+Use-o para saber **onde o projeto está**.
+
+Use os documentos especializados para saber **o que o projeto define**.
+
+Em caso de conflito:
+
+```text
+identificar fonte
+→ verificar autoridade
+→ analisar impacto
+→ não decidir silenciosamente
+```
+
+O objetivo de uma nova sessão é **continuar o projeto do ponto registrado**, não reconstruí-lo.
